@@ -1,4 +1,4 @@
-# Example Mod
+# Simple Spawm Protection Mod for 1.21.1.
 
 ## Setup
 
