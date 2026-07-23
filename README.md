@@ -1,4 +1,4 @@
-# Simple Spawm Protection Mod for 1.21.1.
+# Simple Spawn Protection Mod for 1.21.1.
 
 ## Setup
 

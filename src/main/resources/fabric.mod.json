@@ -10,6 +10,9 @@
 	"license": "MIT",
 	"icon": "assets/spawnprotect/icon.png",
 	"environment": "server",
+	"mixins": [
+		"spawnprotect.mixins.json"
+	],
 	"entrypoints": {
 		"main": [
 			"com.ojace.Spawnprotect"
