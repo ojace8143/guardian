@@ -18,9 +18,8 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"modid" {
+		"spawnprotect" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
 		}
 	}
 }
