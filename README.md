@@ -2,8 +2,8 @@
 
 ## Setup
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+Copy the .jar file from build/libs/ into your mods folder for your server. 0 dependencies.
 
-## License
+## Dependencies
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+None
