@@ -1,8 +1,7 @@
-# Simple Spawn Protection Mod for 1.21.1.
+# 1.21.1 Fabric
 
 ## Setup
-
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+Making a release soon for 1.0. Should've done this earlier but oh well. Will also put up for download on website.
 
 ## License
 
