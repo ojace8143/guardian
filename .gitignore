@@ -1,40 +1,40 @@
-# gradle
-
+# Gradle
 .gradle/
 build/
-out/
-classes/
 
-# eclipse
+# NeoForge development/runtime
+run/
+runs/
 
-*.launch
+# Generated resources
+src/generated/
 
-# idea
+# Java
+*.class
 
+# IntelliJ IDEA
 .idea/
 *.iml
-*.ipr
-*.iws
 
-# vscode
-
-.settings/
-.vscode/
-bin/
+# Eclipse
 .classpath
 .project
+.settings/
 
-# macos
+# VS Code
+.vscode/
 
-*.DS_Store
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-# fabric
+# OS junk
+.DS_Store
+Thumbs.db
 
-run/
-
-# java
-
-hs_err_*.log
-replay_*.log
-*.hprof
-*.jfr
+# Logs / crash reports
+logs/
+crash-reports/
