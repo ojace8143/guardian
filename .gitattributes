@@ -1,0 +1,5 @@
+# Linux start script should use LF
+/gradlew text eol=lf
+
+# Windows scripts should use CRLF
+*.bat text eol=crlf

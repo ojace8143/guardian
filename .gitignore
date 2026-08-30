@@ -1,0 +1,40 @@
+# Gradle
+.gradle/
+build/
+
+# NeoForge development/runtime
+run/
+runs/
+
+# Generated resources
+src/generated/
+
+# Java
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs / crash reports
+logs/
+crash-reports/
