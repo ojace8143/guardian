@@ -1,4 +1,4 @@
-package com.ojace.spawnprotect;
+package com.ojace.guardian;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.core.BlockPos;
