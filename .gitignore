@@ -38,3 +38,8 @@ Thumbs.db
 # Logs / crash reports
 logs/
 crash-reports/
+
+# Documentation (hand-written)
+README.md
+fabric-1.21.1.md
+neoforge-1.21.1.md
