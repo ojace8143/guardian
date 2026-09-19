@@ -1,33 +1,79 @@
 package com.ojace.guardian;
 
-import net.neoforged.neoforge.common.ModConfigSpec;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import net.fabricmc.loader.api.FabricLoader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public final class GuardianConfig {
 
-    public static final ModConfigSpec SPEC;
+    private static final Logger LOGGER = LoggerFactory.getLogger(GuardianConfig.class);
 
-    public static final ModConfigSpec.IntValue PROTECTION_RADIUS;
-    public static final ModConfigSpec.BooleanValue PROTECT_PVP;
-    public static final ModConfigSpec.BooleanValue PROTECT_EXPLOSIONS;
+    private static final Path CONFIG_PATH =
+            FabricLoader.getInstance().getConfigDir().resolve("guardian.json");
 
-    static {
-        ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
-
-        PROTECTION_RADIUS = builder
-                .comment("Radius around world spawn where Guardian protection applies.")
-                .defineInRange("protectionRadius", 100, 0, 1000000);
-
-        PROTECT_PVP = builder
-                .comment("Prevent players from attacking other players inside the protected area.")
-                .define("protectPvP", true);
-
-        PROTECT_EXPLOSIONS = builder
-                .comment("Prevent explosions from affecting the protected area.")
-                .define("protectExplosions", true);
-
-        SPEC = builder.build();
-    }
+    private static int protectionRadius = 100;
+    private static boolean protectPvP = true;
+    private static boolean protectExplosions = true;
 
     private GuardianConfig() {
+    }
+
+    public static void load() {
+        try {
+            if (Files.notExists(CONFIG_PATH)) {
+                write();
+                return;
+            }
+
+            JsonObject json = JsonParser.parseString(Files.readString(CONFIG_PATH)).getAsJsonObject();
+
+            if (json.has("protectionRadius")) {
+                protectionRadius = json.get("protectionRadius").getAsInt();
+            }
+            if (json.has("protectPvP")) {
+                protectPvP = json.get("protectPvP").getAsBoolean();
+            }
+            if (json.has("protectExplosions")) {
+                protectExplosions = json.get("protectExplosions").getAsBoolean();
+            }
+        } catch (Exception e) {
+            LOGGER.error("[Guardian] Failed to read config at {}, using defaults", CONFIG_PATH, e);
+        }
+    }
+
+    private static void write() {
+        try {
+            Files.createDirectories(CONFIG_PATH.getParent());
+
+            JsonObject json = new JsonObject();
+            json.addProperty("protectionRadius", protectionRadius);
+            json.addProperty("protectPvP", protectPvP);
+            json.addProperty("protectExplosions", protectExplosions);
+
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+            Files.writeString(CONFIG_PATH, gson.toJson(json));
+        } catch (Exception e) {
+            LOGGER.error("[Guardian] Failed to write default config at {}", CONFIG_PATH, e);
+        }
+    }
+
+    public static int getProtectionRadius() {
+        return protectionRadius;
+    }
+
+    public static boolean isProtectPvP() {
+        return protectPvP;
+    }
+
+    public static boolean isProtectExplosions() {
+        return protectExplosions;
     }
 }

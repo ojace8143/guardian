@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "guardian",
+  "version": "${version}",
+  "name": "Guardian",
+  "description": "Server-side mod that protects the world spawn area from PvP and explosions.",
+  "authors": [
+    "Jace Orcutt"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "server": [
+      "com.ojace.guardian.Guardian"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "guardian.mixins.json",
+      "environment": "server"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
