@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### v1.0.1
+Fabric 1.21.1 port added.
+
 ### v1.0.0
 Base features like PvP and explosion protection.
 
