@@ -38,4 +38,6 @@ Could end up being multiple iterations if more problems arise*
 ## Notes
 Will create a master branch with all of the detailed information. (might put the .jar files up in there too for easy access)
 
+You can help me test this out. Just make an issue, and i'll whitelist you to my testing server. IP: fab.orcweb.xyz/neo.orcweb.xyz
+
 v1.0.0 for NeoForge is tested and ready, will create a release later today
