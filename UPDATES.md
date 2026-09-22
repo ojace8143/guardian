@@ -2,10 +2,10 @@
 
 ## Changelog
 
-### v1.0.1
-Fabric 1.21.1 port added.
+### v1.0.1 - Fabric
+Fabric 1.21.1 .json config fixed
 
-### v1.0.0
+### v1.0.0 - Neoforge + Fabric
 Base features like PvP and explosion protection.
 
 ## Update Format
