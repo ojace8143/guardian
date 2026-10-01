@@ -35,9 +35,12 @@ Z being bugfixes, extremely small changes, and patches
 
 Could end up being multiple iterations if more problems arise*
 
+## How development works
+I have an itzg/minecraft-server docker container that I run to test my mod. I mainly develop for Fabric first, then make a Neoforge variant. 
+
 ## Notes
 Will create a master branch with all of the detailed information. (might put the .jar files up in there too for easy access)
 
-You can help me test this out. Just make an issue, and i'll whitelist you to my testing server. IP: fab.orcweb.xyz/neo.orcweb.xyz
+You can help me test this out. Just make an issue, and i'll whitelist you to my testing server. IP: fab.orcweb.xyz (Fabric) neo.orcweb.xyz (Neoforge)
 
-v1.0.0 for NeoForge is tested and ready, will create a release later today
+I hate java
